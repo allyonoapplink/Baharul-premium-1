@@ -2262,178 +2262,194 @@
       margin: 0 auto;
       justify-content: center;
     }
+
+    /* ===== Premium Card Designs with Glowing Crowns ===== */
     .featured-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 10px 6px 10px 6px;
-      text-align: center;
       flex: 1;
-      min-width: 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border-radius: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 8px 16px 8px;
+      box-sizing: border-box;
       position: relative;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      min-width: 0;
+      background: #1a1a2e;
+      border: 1px solid rgba(255,255,255,0.12);
       transition: transform 0.2s ease;
     }
     .featured-card:hover {
-      transform: translateY(-2px);
-    }
-    .featured-card .badge-pos {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      color: white;
-      font-size: 9px;
-      font-weight: bold;
-      padding: 2px 6px;
-      border-radius: 5px;
-      background: #ff5722;
-      box-shadow: 0 0 6px rgba(0,0,0,0.2);
-    }
-    .featured-card .badge-pos.b2 { background: #22c55e; }
-    .featured-card .badge-pos.b3 { background: #3b82f6; }
-    .featured-card img {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      object-fit: cover;
-      margin-top: 4px;
-      border: 1px solid #e9edf4;
-      background: #f8fafc;
-    }
-    .featured-card h4 {
-      font-size: 10px;
-      margin: 6px 0 6px 0;
-      color: #0f172a;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-weight: 700;
-    }
-    .featured-card .btn-get-app {
-      background: linear-gradient(135deg, #f97316, #ea580c);
-      color: white;
-      border: none;
-      padding: 5px 0;
-      width: 100%;
-      border-radius: 6px;
-      font-size: 9.5px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
-      transition: all 0.2s ease;
-    }
-    .featured-card .btn-get-app:hover {
-      background: linear-gradient(135deg, #fb923c, #ea580c);
-      box-shadow: 0 0 16px rgba(249, 115, 22, 0.6);
-      transform: scale(1.02);
-    }
-    .featured-card .btn-get-app:active {
-      transform: scale(0.95);
+      transform: translateY(-3px);
     }
 
-    /* ===== CROWN OVERLAY ON FEATURED CARDS ===== */
-    .featured-card .crown-overlay {
-      position: absolute;
-      z-index: 10;
-      pointer-events: none;
-      width: 44px;
-      height: 44px;
+    /* Card 1: Teen Patti Master (Red Theme) */
+    .card-tp {
+      background: linear-gradient(145deg, #b91c1c 0%, #7f1d1d 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Card 2: Yono Games (Green Theme) */
+    .card-yono {
+      background: linear-gradient(145deg, #15803d 0%, #14532d 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Card 3: Spin Crush (Blue Theme) */
+    .card-spin {
+      background: linear-gradient(145deg, #1d4ed8 0%, #1e3a8a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .featured-card .app-icon-wrap {
+      width: 62px;
+      height: 62px;
+      background: #FFFFFF;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.5));
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin-top: 14px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
     }
-    .featured-card .crown-overlay svg {
+    .featured-card .app-icon-wrap img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+    }
+
+    .featured-card .app-title {
+      color: #FFFFFF;
+      font-size: 9.5px;
+      font-weight: 800;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      min-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .featured-card .get-btn {
+      width: 100%;
+      background: linear-gradient(180deg, #ff911a 0%, #e06200 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 50px;
+      padding: 8px 0;
+      font-size: 10px;
+      font-weight: 800;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      letter-spacing: 0.5px;
+      text-decoration: none;
       display: block;
+      position: relative;
+      z-index: 2;
+      transition: background 0.2s;
     }
-    .crown-tl {
-      top: -4px;
-      left: -2px;
+    .featured-card .get-btn:hover {
+      background: linear-gradient(180deg, #ffa040 0%, #e07000 100%);
     }
-    .crown-tr {
-      top: -4px;
-      right: -2px;
+
+    /* Crown Container Positioned Safely on Top */
+    .featured-card .crown-container {
+      position: absolute;
+      top: -16px;
+      left: -4px;
+      width: 58px;
+      height: 44px;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+    }
+    .featured-card .crown-container svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .featured-card .crown-container {
+      animation: crownGlowSlow 4.5s ease-in-out infinite;
+    }
+
+    @keyframes crownGlowSlow {
+      0%, 100% {
+        filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4))
+                drop-shadow(0 0 5px rgba(255, 255, 255, 0.35));
+      }
+      50% {
+        filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4))
+                drop-shadow(0 0 10px rgba(255, 255, 255, 0.9))
+                drop-shadow(0 0 20px rgba(255, 230, 150, 0.6))
+                drop-shadow(0 0 34px rgba(255, 200, 100, 0.35));
+      }
+    }
+
+    .featured-card .crown-container svg .jewel-glow {
+      animation: jewelPulse 4.5s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    @keyframes jewelPulse {
+      0%, 100% { opacity: 0.8; }
+      50%      { opacity: 1; }
+    }
+
+    /* Badge number on Spin Crush */
+    .badge-number {
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      background: #3b82f6;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 5;
     }
 
     @media (max-width: 420px) {
-      .featured-card img {
-        width: 40px;
-        height: 40px;
-      }
-      .featured-card h4 {
-        font-size: 8px;
-        margin: 4px 0;
-      }
-      .featured-card .btn-get-app {
-        font-size: 7.5px;
-        padding: 4px 0;
-      }
-      .featured-card .badge-pos {
-        font-size: 7px;
-        padding: 1px 4px;
-        top: 3px;
-        left: 3px;
-      }
-      .featured-grid {
-        gap: 5px;
-      }
-      .featured-card .crown-overlay {
-        width: 34px;
-        height: 34px;
-      }
-      .crown-tl {
-        top: -4px;
-        left: -3px;
-      }
-      .crown-tr {
-        top: -4px;
-        right: -3px;
-      }
+      .featured-card .app-icon-wrap { width: 48px; height: 48px; margin-top: 10px; }
+      .featured-card .app-title { font-size: 8px; min-height: 20px; }
+      .featured-card .get-btn { font-size: 8px; padding: 6px 0; }
+      .featured-card .crown-container { width: 44px; height: 34px; top: -12px; left: -2px; }
+      .badge-number { width: 18px; height: 18px; font-size: 9px; top: 8px; left: 6px; }
+      .featured-grid { gap: 5px; }
     }
     @media (max-width: 360px) {
-      .featured-card img {
-        width: 34px;
-        height: 34px;
-      }
-      .featured-card h4 {
-        font-size: 7px;
-      }
-      .featured-card .btn-get-app {
-        font-size: 6.5px;
-        padding: 3px 0;
-      }
-      .featured-card .crown-overlay {
-        width: 28px;
-        height: 28px;
-      }
-      .crown-tl {
-        top: -4px;
-        left: -4px;
-      }
-      .crown-tr {
-        top: -4px;
-        right: -4px;
-      }
+      .featured-card .app-icon-wrap { width: 40px; height: 40px; }
+      .featured-card .app-title { font-size: 7px; }
+      .featured-card .get-btn { font-size: 7px; }
+      .featured-card .crown-container { width: 36px; height: 28px; top: -10px; left: -2px; }
+      .badge-number { width: 16px; height: 16px; font-size: 8px; top: 6px; left: 4px; }
     }
     @media (min-width: 769px) {
-      .featured-card .crown-overlay {
-        width: 52px;
-        height: 52px;
-      }
-      .crown-tl {
-        top: -2px;
-        left: 0px;
-      }
-      .crown-tr {
-        top: -2px;
-        right: 0px;
-      }
+      .featured-card .app-icon-wrap { width: 72px; height: 72px; }
+      .featured-card .app-title { font-size: 11px; }
+      .featured-card .crown-container { width: 66px; height: 50px; top: -18px; left: -4px; }
     }
-    /* ===== END CROWN OVERLAY ===== */
+    /* ===== END FEATURED CARDS ===== */
+
   </style>
 </head>
 <body>
@@ -2561,281 +2577,149 @@
     <div id="disclaimerContent"><div class="static-loading">Loading...</div></div>
   </div>
 
-  <!-- FEATURED GRID SECTION (3 apps) - just below red tags -->
+  <!-- FEATURED GRID SECTION (3 apps) - NEW PREMIUM CARDS WITH GLOWING KINGS -->
   <div class="featured-grid-section" id="featuredGridSection">
     <div class="featured-grid">
-      <!-- 1. TEEN PATTI MASTER → White King SVG (top-left) -->
-      <div class="featured-card" style="background:#9E1A1A;">
-        <span class="badge-pos">1</span>
-        <!-- White King SVG (from first HTML) - top-left corner -->
-        <div class="crown-overlay crown-tl">
+
+      <!-- 1. TEEN PATTI MASTER with White King (Red theme) -->
+      <div class="featured-card card-tp">
+        <div class="crown-container">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="silverBody" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FFFFFF"/>
-                <stop offset="30%" stop-color="#F3F5F8"/>
-                <stop offset="55%" stop-color="#D9DEE6"/>
-                <stop offset="80%" stop-color="#B7BFCC"/>
-                <stop offset="100%" stop-color="#8E97A6"/>
+              <linearGradient id="whiteKing" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="30%" stop-color="#F3F5F8"/><stop offset="60%" stop-color="#D1D9E6"/><stop offset="100%" stop-color="#8A96A8"/>
               </linearGradient>
-              <linearGradient id="silverEdge" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
-                <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.4"/>
-                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+              <linearGradient id="whiteEdge1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
               </linearGradient>
-              <radialGradient id="redDiamond" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#FFD2D2"/>
-                <stop offset="40%" stop-color="#FF4D4D"/>
-                <stop offset="100%" stop-color="#A50E0E"/>
+              <radialGradient id="redGem" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="35%" stop-color="#FF3B3B"/><stop offset="100%" stop-color="#B00000"/>
               </radialGradient>
-              <radialGradient id="whiteDiamond" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#FFFFFF"/>
-                <stop offset="45%" stop-color="#E8ECF2"/>
-                <stop offset="100%" stop-color="#AEB8C6"/>
+              <radialGradient id="redGemSmall" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#FF3B3B"/><stop offset="100%" stop-color="#B00000"/>
               </radialGradient>
-              <radialGradient id="greenDiamond" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#C6FFE0"/>
-                <stop offset="40%" stop-color="#33D982"/>
-                <stop offset="100%" stop-color="#0E7A45"/>
-              </radialGradient>
-              <radialGradient id="cyanDiamond" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#D6FBFF"/>
-                <stop offset="40%" stop-color="#39E0F0"/>
-                <stop offset="100%" stop-color="#0A8C99"/>
-              </radialGradient>
-              <radialGradient id="blueDiamond" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#D2E4FF"/>
-                <stop offset="40%" stop-color="#4C8CFF"/>
-                <stop offset="100%" stop-color="#123E9E"/>
-              </radialGradient>
-              <linearGradient id="pearlBand" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FFFFFF"/>
-                <stop offset="100%" stop-color="#E4E9F0"/>
+              <linearGradient id="pearlKing1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#DDE3EC"/>
               </linearGradient>
             </defs>
-            <rect x="28" y="146" width="144" height="26" rx="6" fill="url(#silverBody)"/>
-            <rect x="28" y="146" width="144" height="8" rx="4" fill="url(#silverEdge)"/>
-            <rect x="28" y="146" width="144" height="26" rx="6" fill="none" stroke="#9AA3B2" stroke-width="1.2" opacity="0.6"/>
-            <g fill="url(#pearlBand)" stroke="#C4CBD6" stroke-width="0.6">
-              <circle cx="40" cy="176" r="5"/>
-              <circle cx="60" cy="178" r="5"/>
-              <circle cx="80" cy="179" r="5"/>
-              <circle cx="100" cy="179.5" r="5"/>
-              <circle cx="120" cy="179" r="5"/>
-              <circle cx="140" cy="178" r="5"/>
-              <circle cx="160" cy="176" r="5"/>
+            <rect x="28" y="146" width="144" height="26" rx="6" fill="url(#whiteKing)" stroke="#7A8699" stroke-width="1.2"/>
+            <rect x="28" y="146" width="144" height="8" rx="4" fill="url(#whiteEdge1)"/>
+            <g fill="url(#pearlKing1)" stroke="#B7C0CE" stroke-width="0.6">
+              <circle cx="42" cy="171" r="4.2"/><circle cx="62" cy="173" r="4.2"/><circle cx="82" cy="174" r="4.2"/>
+              <circle cx="100" cy="174.5" r="4.2"/><circle cx="118" cy="174" r="4.2"/><circle cx="138" cy="173" r="4.2"/><circle cx="158" cy="171" r="4.2"/>
             </g>
-            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z"
-            fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z"
-            fill="url(#silverEdge)" opacity="0.55"/>
-            <circle cx="28" cy="104" r="8" fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="1.5"/>
-            <circle cx="100" cy="56" r="9" fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="1.5"/>
-            <circle cx="172" cy="104" r="8" fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="1.5"/>
-            <g class="jewel">
-              <path d="M100 47 L108 56 L100 65 L92 56 Z" fill="url(#whiteDiamond)" stroke="#8892A0" stroke-width="1"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.2s">
-              <path d="M100 104 L114 118 L100 132 L86 118 Z" fill="url(#redDiamond)" stroke="#7A1414" stroke-width="1.3"/>
-              <path d="M100 104 L108 118 L100 132" fill="none" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="0.8"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.6s">
-              <path d="M63 122 L72 130 L63 139 L54 130 Z" fill="url(#greenDiamond)" stroke="#0E5C33" stroke-width="1.1"/>
-            </g>
-            <g class="jewel" style="animation-delay:1s">
-              <path d="M137 122 L146 130 L137 139 L128 130 Z" fill="url(#blueDiamond)" stroke="#0E2E7A" stroke-width="1.1"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.15s">
-              <path d="M48 154 L54 159 L48 164 L42 159 Z" fill="url(#cyanDiamond)" stroke="#0A6873" stroke-width="0.8"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.45s">
-              <path d="M76 154 L82 159 L76 164 L70 159 Z" fill="url(#whiteDiamond)" stroke="#8892A0" stroke-width="0.8"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.75s">
-              <path d="M100 152 L107 159 L100 166 L93 159 Z" fill="url(#redDiamond)" stroke="#7A1414" stroke-width="0.9"/>
-            </g>
-            <g class="jewel" style="animation-delay:1.05s">
-              <path d="M124 154 L130 159 L124 164 L118 159 Z" fill="url(#whiteDiamond)" stroke="#8892A0" stroke-width="0.8"/>
-            </g>
-            <g class="jewel" style="animation-delay:1.35s">
-              <path d="M152 154 L158 159 L152 164 L146 159 Z" fill="url(#greenDiamond)" stroke="#0E5C33" stroke-width="0.8"/>
-            </g>
+            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#whiteKing)" stroke="#7A8699" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#whiteEdge1)" opacity="0.5"/>
+            <circle cx="28" cy="104" r="8" fill="url(#whiteKing)" stroke="#7A8699" stroke-width="1.5"/>
+            <circle cx="100" cy="56" r="9" fill="url(#whiteKing)" stroke="#7A8699" stroke-width="1.5"/>
+            <circle cx="172" cy="104" r="8" fill="url(#whiteKing)" stroke="#7A8699" stroke-width="1.5"/>
+            <circle cx="100" cy="118" r="13" class="jewel-glow" fill="url(#redGem)" stroke="#FF6B6B" stroke-width="1.3" filter="drop-shadow(0 0 4px #FF3B3B)"/>
+            <ellipse cx="95.5" cy="112.5" rx="3" ry="1.8" fill="#FFFFFF" opacity="0.9"/>
+            <circle cx="63" cy="129" r="6.5" class="jewel-glow" fill="url(#redGemSmall)" stroke="#FF6B6B" stroke-width="1" filter="drop-shadow(0 0 3px #FF3B3B)"/>
+            <circle cx="137" cy="129" r="6.5" class="jewel-glow" fill="url(#redGemSmall)" stroke="#FF6B6B" stroke-width="1" filter="drop-shadow(0 0 3px #FF3B3B)"/>
+            <circle cx="100" cy="159" r="4.5" class="jewel-glow" fill="url(#redGemSmall)" stroke="#FF6B6B" stroke-width="0.8" filter="drop-shadow(0 0 3px #FF3B3B)"/>
           </svg>
         </div>
-        <img src="https://i.ibb.co/cXkXTDPR/Screenshot-20260814-052628.jpg" alt="TEEN PATTI MASTER" loading="lazy" style="position:relative; z-index:1;">
-        <h4 style="color:#fff;">TEEN PATTI MASTER</h4>
-        <a href="https://www.earntp.com/m/jm9n7r" target="_blank" rel="noopener" class="btn-get-app">GET APP</a>
+        <div class="app-icon-wrap">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a5/d6/04/a5d604b3-5799-a864-1563-718a7c293ee6/AppIcon-0-0-1x_U007emarketing-0-7-0-85-228.png/512x512bb.jpg" alt="Teen Patti Master">
+        </div>
+        <div class="app-title">TEEN PATTI MASTER</div>
+        <a href="https://www.earntp.com/m/jm9n7r" target="_blank" rel="noopener" class="get-btn">GET APP</a>
       </div>
 
-      <!-- 2. YONO GAMES → Gold King SVG (top-left) -->
-      <div class="featured-card" style="background:#1B5E20;">
-        <span class="badge-pos b2">2</span>
-        <!-- Gold King SVG (from second HTML) - top-left corner -->
-        <div class="crown-overlay crown-tl">
+      <!-- 2. YONO GAMES with Cyan King (Green theme) -->
+      <div class="featured-card card-yono">
+        <div class="crown-container">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="goldBody" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FFF3C4"/>
-                <stop offset="22%" stop-color="#FFD866"/>
-                <stop offset="50%" stop-color="#F5B93B"/>
-                <stop offset="78%" stop-color="#C9861B"/>
-                <stop offset="100%" stop-color="#9C650F"/>
+              <linearGradient id="cyanKing" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#F0FFFF"/><stop offset="30%" stop-color="#CFFAFE"/><stop offset="60%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#0891B2"/>
               </linearGradient>
-              <linearGradient id="goldEdge" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
-                <stop offset="30%" stop-color="#FFE9A8" stop-opacity="0.35"/>
-                <stop offset="100%" stop-color="#FFE9A8" stop-opacity="0"/>
+              <linearGradient id="cyanEdge1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
               </linearGradient>
-              <radialGradient id="rubyGrad" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#FF7F7F"/>
-                <stop offset="45%" stop-color="#E43D3D"/>
-                <stop offset="100%" stop-color="#8E1414"/>
+              <radialGradient id="cyanGem" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="35%" stop-color="#FF4FC3"/><stop offset="100%" stop-color="#B0128F"/>
               </radialGradient>
-              <radialGradient id="emeraldGrad" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#8FF0C0"/>
-                <stop offset="45%" stop-color="#2FBE7A"/>
-                <stop offset="100%" stop-color="#0E6B42"/>
+              <radialGradient id="cyanGemSmall" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#FF4FC3"/><stop offset="100%" stop-color="#B0128F"/>
               </radialGradient>
-              <radialGradient id="sapphireGrad" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#9CC7FF"/>
-                <stop offset="45%" stop-color="#3E7FE0"/>
-                <stop offset="100%" stop-color="#1C3E8A"/>
-              </radialGradient>
-              <linearGradient id="pearlBand" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FFFDF3"/>
-                <stop offset="100%" stop-color="#F4E4B0"/>
+              <linearGradient id="pearlKing2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#CFFAFE"/>
               </linearGradient>
             </defs>
-            <rect x="28" y="146" width="144" height="26" rx="6" fill="url(#goldBody)"/>
-            <rect x="28" y="146" width="144" height="8" rx="4" fill="url(#goldEdge)"/>
-            <rect x="28" y="146" width="144" height="26" rx="6" fill="none" stroke="#7A4F0B" stroke-width="1.2" opacity="0.5"/>
-            <g fill="url(#pearlBand)" stroke="#B9975B" stroke-width="0.6">
-              <circle cx="40" cy="176" r="5"/>
-              <circle cx="60" cy="178" r="5"/>
-              <circle cx="80" cy="179" r="5"/>
-              <circle cx="100" cy="179.5" r="5"/>
-              <circle cx="120" cy="179" r="5"/>
-              <circle cx="140" cy="178" r="5"/>
-              <circle cx="160" cy="176" r="5"/>
+            <rect x="28" y="146" width="144" height="26" rx="6" fill="url(#cyanKing)" stroke="#0E7490" stroke-width="1.2"/>
+            <rect x="28" y="146" width="144" height="8" rx="4" fill="url(#cyanEdge1)"/>
+            <g fill="url(#pearlKing2)" stroke="#67C7D6" stroke-width="0.6">
+              <circle cx="42" cy="171" r="4.2"/><circle cx="62" cy="173" r="4.2"/><circle cx="82" cy="174" r="4.2"/>
+              <circle cx="100" cy="174.5" r="4.2"/><circle cx="118" cy="174" r="4.2"/><circle cx="138" cy="173" r="4.2"/><circle cx="158" cy="171" r="4.2"/>
             </g>
-            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z"
-            fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z"
-            fill="url(#goldEdge)" opacity="0.5"/>
-            <circle cx="28" cy="104" r="8" fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="1.5"/>
-            <circle cx="100" cy="56" r="9" fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="1.5"/>
-            <circle cx="172" cy="104" r="8" fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="1.5"/>
-            <g class="jewel">
-              <circle cx="100" cy="118" r="14" fill="url(#rubyGrad)" stroke="#6E0E0E" stroke-width="1.4"/>
-              <ellipse cx="95" cy="112" rx="3.4" ry="2" fill="#FFFFFF" opacity="0.75"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.5s">
-              <circle cx="63" cy="130" r="9" fill="url(#emeraldGrad)" stroke="#0A4A2C" stroke-width="1.2"/>
-              <ellipse cx="60" cy="126.5" rx="2.4" ry="1.5" fill="#FFFFFF" opacity="0.7"/>
-            </g>
-            <g class="jewel" style="animation-delay:1s">
-              <circle cx="137" cy="130" r="9" fill="url(#sapphireGrad)" stroke="#122A5E" stroke-width="1.2"/>
-              <ellipse cx="134" cy="126.5" rx="2.4" ry="1.5" fill="#FFFFFF" opacity="0.7"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.3s">
-              <circle cx="48" cy="159" r="4.2" fill="url(#emeraldGrad)" stroke="#0A4A2C" stroke-width="0.8"/>
-              <circle cx="76" cy="159" r="4.2" fill="url(#sapphireGrad)" stroke="#122A5E" stroke-width="0.8"/>
-              <circle cx="100" cy="159" r="5" fill="url(#rubyGrad)" stroke="#6E0E0E" stroke-width="0.9"/>
-              <circle cx="124" cy="159" r="4.2" fill="url(#sapphireGrad)" stroke="#122A5E" stroke-width="0.8"/>
-              <circle cx="152" cy="159" r="4.2" fill="url(#emeraldGrad)" stroke="#0A4A2C" stroke-width="0.8"/>
-            </g>
+            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#cyanKing)" stroke="#0E7490" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#cyanEdge1)" opacity="0.5"/>
+            <circle cx="28" cy="104" r="8" fill="url(#cyanKing)" stroke="#0E7490" stroke-width="1.5"/>
+            <circle cx="100" cy="56" r="9" fill="url(#cyanKing)" stroke="#0E7490" stroke-width="1.5"/>
+            <circle cx="172" cy="104" r="8" fill="url(#cyanKing)" stroke="#0E7490" stroke-width="1.5"/>
+            <circle cx="100" cy="118" r="13" class="jewel-glow" fill="url(#cyanGem)" stroke="#FF8AD8" stroke-width="1.3" filter="drop-shadow(0 0 4px #FF4FC3)"/>
+            <ellipse cx="95.5" cy="112.5" rx="3" ry="1.8" fill="#FFFFFF" opacity="0.9"/>
+            <circle cx="63" cy="129" r="6.5" class="jewel-glow" fill="url(#cyanGemSmall)" stroke="#FF8AD8" stroke-width="1" filter="drop-shadow(0 0 3px #FF4FC3)"/>
+            <circle cx="137" cy="129" r="6.5" class="jewel-glow" fill="url(#cyanGemSmall)" stroke="#FF8AD8" stroke-width="1" filter="drop-shadow(0 0 3px #FF4FC3)"/>
+            <circle cx="100" cy="159" r="4.5" class="jewel-glow" fill="url(#cyanGemSmall)" stroke="#FF8AD8" stroke-width="0.8" filter="drop-shadow(0 0 3px #FF4FC3)"/>
           </svg>
         </div>
-        <img src="https://i.ibb.co/Gf0fxYQ4/Screenshot-20260814-040510.jpg" alt="YONO GAMES" loading="lazy" style="position:relative; z-index:1;">
-        <h4 style="color:#fff;">YONO GAMES</h4>
-        <a href="https://yonogamesm.com/?code=LHS49AEHVMR&t=1784314209" target="_blank" rel="noopener" class="btn-get-app">GET APP</a>
+        <div class="app-icon-wrap">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/91/92/7e/91927ec5-ef66-3d71-5f28-b80c5c643909/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg" alt="Yono Games">
+        </div>
+        <div class="app-title">YONO GAMES</div>
+        <a href="https://yonogamesm.com/?code=LHS49AEHVMR&t=1784314209" target="_blank" rel="noopener" class="get-btn">GET APP</a>
       </div>
 
-      <!-- 3. SPIN CRUSH → Imperial Crown SVG (top-right) -->
-      <div class="featured-card" style="background:#0D47A1;">
-        <span class="badge-pos b3">3</span>
-        <!-- Imperial Crown SVG (from third HTML) - top-right corner -->
-        <div class="crown-overlay crown-tr">
+      <!-- 3. SPIN CRUSH with Pink/Red King (Blue theme) -->
+      <div class="featured-card card-spin">
+        <div class="badge-number">3</div>
+        <div class="crown-container">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="goldBody2" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FFF6D6"/>
-                <stop offset="20%" stop-color="#FFE08A"/>
-                <stop offset="50%" stop-color="#F0B23A"/>
-                <stop offset="78%" stop-color="#C9861B"/>
-                <stop offset="100%" stop-color="#8F5E0C"/>
+              <linearGradient id="redKing" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFE0E0"/><stop offset="30%" stop-color="#FFB3B3"/><stop offset="60%" stop-color="#EF4444"/><stop offset="100%" stop-color="#991B1B"/>
               </linearGradient>
-              <linearGradient id="goldEdge2" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
-                <stop offset="35%" stop-color="#FFE9A8" stop-opacity="0.3"/>
-                <stop offset="100%" stop-color="#FFE9A8" stop-opacity="0"/>
+              <linearGradient id="redEdge1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
               </linearGradient>
-              <radialGradient id="rubyCore" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#FFB0B0"/>
-                <stop offset="45%" stop-color="#E43D3D"/>
-                <stop offset="100%" stop-color="#7A0F0F"/>
+              <radialGradient id="rubyGem" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="35%" stop-color="#FFE23B"/><stop offset="100%" stop-color="#C79A00"/>
               </radialGradient>
-              <radialGradient id="amethystCore" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#E3C4FF"/>
-                <stop offset="45%" stop-color="#9B4FE0"/>
-                <stop offset="100%" stop-color="#4B1C7A"/>
+              <radialGradient id="rubyGemSmall" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#FFE23B"/><stop offset="100%" stop-color="#C79A00"/>
               </radialGradient>
-              <radialGradient id="topOrbGlow" cx="40%" cy="35%" r="65%">
-                <stop offset="0%" stop-color="#FFFDF0"/>
-                <stop offset="55%" stop-color="#FFDE8A"/>
-                <stop offset="100%" stop-color="#C9861B"/>
-              </radialGradient>
-              <linearGradient id="pearlBand2" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FFFDF3"/>
-                <stop offset="100%" stop-color="#F4E4B0"/>
+              <linearGradient id="pearlKing3" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#FFD7D7"/>
               </linearGradient>
             </defs>
-            <rect x="30" y="140" width="140" height="24" rx="8" fill="url(#goldBody2)" stroke="#7A4F0B" stroke-width="1.5"/>
-            <rect x="30" y="140" width="140" height="7" rx="3.5" fill="url(#goldEdge2)"/>
-            <g fill="url(#pearlBand2)" stroke="#B9975B" stroke-width="0.6">
-              <circle cx="42" cy="167" r="4.5"/>
-              <circle cx="62" cy="169" r="4.5"/>
-              <circle cx="82" cy="170" r="4.5"/>
-              <circle cx="100" cy="170.5" r="4.5"/>
-              <circle cx="118" cy="170" r="4.5"/>
-              <circle cx="138" cy="169" r="4.5"/>
-              <circle cx="158" cy="167" r="4.5"/>
+            <rect x="28" y="146" width="144" height="26" rx="6" fill="url(#redKing)" stroke="#7F1D1D" stroke-width="1.2"/>
+            <rect x="28" y="146" width="144" height="8" rx="4" fill="url(#redEdge1)"/>
+            <g fill="url(#pearlKing3)" stroke="#C97A7A" stroke-width="0.6">
+              <circle cx="42" cy="171" r="4.2"/><circle cx="62" cy="173" r="4.2"/><circle cx="82" cy="174" r="4.2"/>
+              <circle cx="100" cy="174.5" r="4.2"/><circle cx="118" cy="174" r="4.2"/><circle cx="138" cy="173" r="4.2"/><circle cx="158" cy="171" r="4.2"/>
             </g>
-            <path d="M38 140 Q100 55 162 140" fill="none" stroke="url(#goldBody2)" stroke-width="9" stroke-linecap="round"/>
-            <path d="M38 140 Q100 55 162 140" fill="none" stroke="#7A4F0B" stroke-width="9" stroke-linecap="round" opacity="0.18"/>
-            <path d="M55 140 Q100 40 145 140" fill="none" stroke="url(#goldBody2)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M55 140 Q100 40 145 140" fill="none" stroke="#7A4F0B" stroke-width="7" stroke-linecap="round" opacity="0.18"/>
-            <path d="M38 140 L30 118 L44 126 L38 106 L52 122 L46 140 Z" fill="url(#goldBody2)" stroke="#7A4F0B" stroke-width="1.4" stroke-linejoin="round"/>
-            <path d="M162 140 L170 118 L156 126 L162 106 L148 122 L154 140 Z" fill="url(#goldBody2)" stroke="#7A4F0B" stroke-width="1.4" stroke-linejoin="round"/>
-            <circle class="orb-glow" cx="100" cy="55" r="13" fill="url(#topOrbGlow)" stroke="#7A4F0B" stroke-width="1.6"/>
-            <path d="M100 42 L100 34 M94 38 L88 32 M106 38 L112 32" stroke="url(#goldBody2)" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="100" cy="30" r="4" fill="url(#goldBody2)" stroke="#7A4F0B" stroke-width="1"/>
-            <g class="jewel">
-              <circle cx="100" cy="55" r="6" fill="url(#amethystCore)" stroke="#3A1560" stroke-width="1"/>
-              <ellipse cx="98" cy="52.5" rx="1.8" ry="1.1" fill="#FFFFFF" opacity="0.75"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.4s">
-              <circle cx="100" cy="152" r="10" fill="url(#rubyCore)" stroke="#5A0C0C" stroke-width="1.3"/>
-              <ellipse cx="96.5" cy="148.5" rx="2.6" ry="1.6" fill="#FFFFFF" opacity="0.75"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.7s">
-              <circle cx="72" cy="152" r="5.5" fill="url(#amethystCore)" stroke="#3A1560" stroke-width="0.9"/>
-            </g>
-            <g class="jewel" style="animation-delay:1s">
-              <circle cx="128" cy="152" r="5.5" fill="url(#amethystCore)" stroke="#3A1560" stroke-width="0.9"/>
-            </g>
-            <g class="jewel" style="animation-delay:0.2s">
-              <circle cx="38" cy="106" r="4" fill="url(#rubyCore)" stroke="#5A0C0C" stroke-width="0.8"/>
-            </g>
-            <g class="jewel" style="animation-delay:1.2s">
-              <circle cx="162" cy="106" r="4" fill="url(#rubyCore)" stroke="#5A0C0C" stroke-width="0.8"/>
-            </g>
+            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#redKing)" stroke="#7F1D1D" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#redEdge1)" opacity="0.5"/>
+            <circle cx="28" cy="104" r="8" fill="url(#redKing)" stroke="#7F1D1D" stroke-width="1.5"/>
+            <circle cx="100" cy="56" r="9" fill="url(#redKing)" stroke="#7F1D1D" stroke-width="1.5"/>
+            <circle cx="172" cy="104" r="8" fill="url(#redKing)" stroke="#7F1D1D" stroke-width="1.5"/>
+            <circle cx="100" cy="118" r="14" class="jewel-glow" fill="url(#rubyGem)" stroke="#FFE97F" stroke-width="1.4" filter="drop-shadow(0 0 4px #FFE23B)"/>
+            <ellipse cx="95" cy="112" rx="3.4" ry="2" fill="#FFFFFF" opacity="0.9"/>
+            <circle cx="63" cy="129" r="6.5" class="jewel-glow" fill="url(#rubyGemSmall)" stroke="#FFE97F" stroke-width="1" filter="drop-shadow(0 0 3px #FFE23B)"/>
+            <circle cx="137" cy="129" r="6.5" class="jewel-glow" fill="url(#rubyGemSmall)" stroke="#FFE97F" stroke-width="1" filter="drop-shadow(0 0 3px #FFE23B)"/>
+            <circle cx="100" cy="159" r="4.5" class="jewel-glow" fill="url(#rubyGemSmall)" stroke="#FFE97F" stroke-width="0.8" filter="drop-shadow(0 0 3px #FFE23B)"/>
           </svg>
         </div>
-        <img src="https://i.ibb.co/M5cLBLc1/Screenshot-20260814-034836.jpg" alt="SPIN CRUSH" loading="lazy" style="position:relative; z-index:1;">
-        <h4 style="color:#fff;">SPIN CRUSH</h4>
-        <a href="https://d292swwe9zki3u.cloudfront.net/spincrush_freecash.apk" target="_blank" rel="noopener" class="btn-get-app">GET APP</a>
+        <div class="app-icon-wrap">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/4a/01/5e/4a015e12-b13c-f458-eb50-0a2559b3f3a6/AppIcon-0-1-1x_U007e1-ad-0-85-220.png/512x512bb.jpg" alt="Spin Crush">
+        </div>
+        <div class="app-title">SPIN CRUSH</div>
+        <a href="https://d292swwe9zki3u.cloudfront.net/spincrush_freecash.apk" target="_blank" rel="noopener" class="get-btn">GET APP</a>
       </div>
+
     </div>
   </div>
 
