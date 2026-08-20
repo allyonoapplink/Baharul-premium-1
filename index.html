@@ -3338,7 +3338,7 @@
             transform: scale(0.95);
         }
 
-        /* ===== CROWN ICON OVERLAY ON FEATURED CARDS ===== */
+        /* ===== CROWN OVERLAY ON FEATURED CARDS ===== */
         .featured-card .crown-overlay {
             position: absolute;
             z-index: 10;
@@ -3566,13 +3566,12 @@
             <div id="disclaimerContent"><div class="static-loading">Loading...</div></div>
         </div>
 
-        <!-- FEATURED GRID SECTION (3 apps) - just below red tags -->
+        <!-- FEATURED GRID SECTION (3 apps) - UPDATED WITH CORRECT IMAGES -->
         <div class="featured-grid-section" id="featuredGridSection">
             <div class="featured-grid">
-                <!-- 1. TEEN PATTI MASTER → White King SVG (top-left) -->
+                <!-- 1. TEEN PATTI MASTER -->
                 <div class="featured-card" style="background:#9E1A1A;">
                     <span class="badge-pos">1</span>
-                    <!-- White King SVG (from first HTML) - top-left corner -->
                     <div class="crown-overlay crown-tl">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
@@ -3630,10 +3629,8 @@
                                 <circle cx="140" cy="178" r="5"/>
                                 <circle cx="160" cy="176" r="5"/>
                             </g>
-                            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z"
-                            fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z"
-                            fill="url(#silverEdge)" opacity="0.55"/>
+                            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#silverEdge)" opacity="0.55"/>
                             <circle cx="28" cy="104" r="8" fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="1.5"/>
                             <circle cx="100" cy="56" r="9" fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="1.5"/>
                             <circle cx="172" cy="104" r="8" fill="url(#silverBody)" stroke="#9AA3B2" stroke-width="1.5"/>
@@ -3672,10 +3669,9 @@
                     <a href="https://www.earntp.com/m/jm9n7r" target="_blank" rel="noopener" class="btn-get-app">GET APP</a>
                 </div>
 
-                <!-- 2. YONO GAMES → Gold King SVG (top-left) -->
+                <!-- 2. YONO GAMES -->
                 <div class="featured-card" style="background:#1B5E20;">
                     <span class="badge-pos b2">2</span>
-                    <!-- Gold King SVG (from second HTML) - top-left corner -->
                     <div class="crown-overlay crown-tl">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
@@ -3723,10 +3719,8 @@
                                 <circle cx="140" cy="178" r="5"/>
                                 <circle cx="160" cy="176" r="5"/>
                             </g>
-                            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z"
-                            fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z"
-                            fill="url(#goldEdge)" opacity="0.5"/>
+                            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M28 146 L28 108 L58 132 L82 60 L100 92 L118 60 L142 132 L172 108 L172 146 Z" fill="url(#goldEdge)" opacity="0.5"/>
                             <circle cx="28" cy="104" r="8" fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="1.5"/>
                             <circle cx="100" cy="56" r="9" fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="1.5"/>
                             <circle cx="172" cy="104" r="8" fill="url(#goldBody)" stroke="#7A4F0B" stroke-width="1.5"/>
@@ -3756,10 +3750,9 @@
                     <a href="https://yonogamesm.com/?code=LHS49AEHVMR&t=1784314209" target="_blank" rel="noopener" class="btn-get-app">GET APP</a>
                 </div>
 
-                <!-- 3. SPIN CRUSH → Imperial Crown SVG (top-right) -->
+                <!-- 3. SPIN CRUSH -->
                 <div class="featured-card" style="background:#0D47A1;">
                     <span class="badge-pos b3">3</span>
-                    <!-- Imperial Crown SVG (from third HTML) - top-right corner -->
                     <div class="crown-overlay crown-tr">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
@@ -4934,7 +4927,7 @@
                     })
                     .catch(() => {
                         contentElement.innerHTML =
-                        '<p style="color:#64748b;text-align:center;">Content not available</p>';
+                            '<p style="color:#64748b;text-align:center;">Content not available</p>';
                     });
             }
 
@@ -4953,7 +4946,8 @@
                     .then(html => {
                         const tempDiv = document.createElement('div');
                         tempDiv.innerHTML = html;
-                        const removeTags = tempDiv.querySelectorAll('script, style, link, meta, title, head, noscript, iframe, object, embed');
+                        const removeTags = tempDiv.querySelectorAll(
+                            'script, style, link, meta, title, head, noscript, iframe, object, embed');
                         removeTags.forEach(el => el.remove());
                         let bodyContent = tempDiv.innerHTML;
                         const bodyEl = tempDiv.querySelector('body');
@@ -4973,7 +4967,7 @@
                         let hasContent = false;
                         nodes.forEach(node => {
                             if (node.nodeType === 1 || (node.nodeType === 3 && node.textContent.trim().length >
-                                0)) {
+                                    0)) {
                                 const clone = node.cloneNode(true);
                                 if (node.nodeType === 3) {
                                     const span = document.createElement('span');
@@ -5214,7 +5208,7 @@
                 var codes = ['YONO', 'REF', 'WIN', 'GAME', 'PLAY', 'CASH', 'LUCKY', 'BONUS', 'VIP', 'GOLD', 'STAR', 'PRO'];
                 var codeNum = (seed * 7) % 1000;
                 var code = codes[seed % codes.length] + (codeNum % 100).toString().padStart(2, '0') + String.fromCharCode(
-                65 + (seed % 26));
+                    65 + (seed % 26));
                 return { refBonus: refBonus, refCode: code };
             }
 
@@ -5622,7 +5616,8 @@
                 shareClickCount++;
                 var shareUrl = 'https://www.earntp.com/m/jm9n7r';
                 var encodedUrl = encodeURIComponent(shareUrl);
-                var text = encodeURIComponent('YONO NEW APP – Download 77+ Yono Games. Get ₹45 Bonus & ₹100 Withdrawal!');
+                var text = encodeURIComponent(
+                'YONO NEW APP – Download 77+ Yono Games. Get ₹45 Bonus & ₹100 Withdrawal!');
                 if (shareClickCount % 2 === 1) {
                     var whatsappUrl = 'https://api.whatsapp.com/send?text=' + text + '%20' + encodedUrl;
                     window.open(whatsappUrl, '_blank');
